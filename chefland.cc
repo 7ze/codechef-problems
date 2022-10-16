@@ -1,12 +1,11 @@
 /**
- 
+
 Problem
-  in chefland, a tennis game involves 444 referees. each referee has to point out
-  whether he considers the ball to be inside limits or outside limits. the ball
-  is considered to be in if and only if all the referees agree that it was inside
-  limits.
-  given the decision of the 4 referees, help chef determine whether the ball is
-  considered inside limits or not.
+  in chefland, a tennis game involves 444 referees. each referee has to point
+out whether he considers the ball to be inside limits or outside limits. the
+ball is considered to be in if and only if all the referees agree that it was
+inside limits. given the decision of the 4 referees, help chef determine whether
+the ball is considered inside limits or not.
 
 Input format
   The first line of input will contain a single integer T, denoting the
@@ -21,10 +20,10 @@ Output Format
   For each test case, output IN if the ball is considered to be inside limits
   by all referees and OUT otherwise.
   The checker is case-insensitive so answers like in, In, and IN would be
-  considered the same. 
+  considered the same.
 
 Constraints
-    1 ≤ T ≤ 20 
+    1 ≤ T ≤ 20
     0 ≤ R1, R2, R3, R4 ≤ 1
 */
 
@@ -34,25 +33,24 @@ using namespace std;
 const int NUMBER_OF_JUDGES = 4;
 
 int main(void) {
-  int limit, i, j, sum = 0;
-  cin >>limit;
+    int limit, i, j, sum = 0;
+    cin >> limit;
 
-  int a[limit][NUMBER_OF_JUDGES];
+    int a[limit][NUMBER_OF_JUDGES];
 
-  for (i=0; i<limit; i++)
-    for (j=0; j<NUMBER_OF_JUDGES; j++)
-      cin >> a[i][j];
+    for (i = 0; i < limit; i++)
+        for (j = 0; j < NUMBER_OF_JUDGES; j++)
+            cin >> a[i][j];
 
-  for (i=0; i<limit; i++) {
-    for (j=0; j<NUMBER_OF_JUDGES; j++)
-      sum += a[i][j];
-    if (sum == 0)
-      cout << "IN" << endl;
-    else
-      cout << "OUT" << endl;
-    sum =  0;
-  }
+    for (i = 0; i < limit; i++) {
+        for (j = 0; j < NUMBER_OF_JUDGES; j++)
+            sum += a[i][j];
+        if (sum == 0)
+            cout << "IN" << endl;
+        else
+            cout << "OUT" << endl;
+        sum = 0;
+    }
 
-  return 0;
+    return 0;
 }
-

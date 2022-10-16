@@ -27,18 +27,18 @@ using namespace std;
 const int WIN_SCORE = 7;
 
 int main (void) {
-  int limit, a, b, i;
-  cin >> limit;
-  int score[limit];
+    int limit, a, b, i;
+    cin >> limit;
+    int score[limit];
 
-  for(i=0; i<limit; i++){
-    cin >> a >> b;
-    score[i] = a > b ? (WIN_SCORE-a) : ( WIN_SCORE-b); 
-  }
+    for(i=0; i<limit; i++){
+        cin >> a >> b;
+        score[i] = a > b ? (WIN_SCORE-a) : ( WIN_SCORE-b); 
+    }
 
-  for(i=0; i<limit; i++)
-    cout << score[i] << endl;
+    for(i=0; i<limit; i++)
+        cout << score[i] << endl;
 
-  return 0;
+    return 0;
 }
 

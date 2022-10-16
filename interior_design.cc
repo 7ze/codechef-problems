@@ -27,18 +27,18 @@ Constraints
 using namespace std;
 
 int min (int a, int b) {
-  return a < b ? a : b;
+    return a < b ? a : b;
 }
 
 int main () {
-  int x1, y1, x2, y2, T, i;
-  cin >> T;
+    int x1, y1, x2, y2, T, i;
+    cin >> T;
 
-  for (i=0; i<T; i++) {
-    cin >> x1 >> y1 >> x2 >> y2;
-    cout << min(x1+y1, x2+y2) << endl;
-  }
+    for (i=0; i<T; i++) {
+        cin >> x1 >> y1 >> x2 >> y2;
+        cout << min(x1+y1, x2+y2) << endl;
+    }
 
-  return 0;
+    return 0;
 }
 

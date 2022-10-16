@@ -27,12 +27,12 @@ Constraints
 
 using namespace std;
 
-int main () {
-  int T, x, p, q, i;
-  cin >> T;
-  for (i=0;i<T;i++) {
-    cin >> x >> p >> q;
-    cout << x * (p-q) << endl;
-  }
-  return 0;
+int main() {
+    int T, x, p, q, i;
+    cin >> T;
+    for (i = 0; i < T; i++) {
+        cin >> x >> p >> q;
+        cout << x * (p - q) << endl;
+    }
+    return 0;
 }
